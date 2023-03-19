@@ -26,7 +26,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
+  
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
@@ -51,6 +51,15 @@
         <plugin>
           <artifactId>maven-jar-plugin</artifactId>
           <version>3.0.2</version>
+          <!-- start 実行可能jarの作成 -->
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>com.example.App</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+          <!-- end 実行可能jarの作成 -->
         </plugin>
         <plugin>
           <artifactId>maven-install-plugin</artifactId>
